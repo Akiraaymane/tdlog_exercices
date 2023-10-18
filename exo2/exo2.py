@@ -29,11 +29,11 @@ fixed_tests_False = (
 )
 """
 import sys
-def unit_test(liste):
+def unit_tour(liste):
     a=0
     for list in liste :
         if len(list[0])<len(list[1]):
-            print(False)
+            return(False)
             sys.exit()
         else:
             for i in range(len(list[1])):
@@ -48,14 +48,15 @@ def unit_test(liste):
         return(False)                   
     
 
-fixed_tests_False = (
-    ( "sumo",    "omo"   ),
-    ( "samurai", "ra"    ),
-    ( "abc",     "abcd"  ),
-    ( "ails",    "fails" ),
-    ( "this",    "fails" ),
-    ( "spam",    "eggs"  )
+fixed_tests_True = (
+    ( "samurai", "ai"    ),
+    ( "ninja",   "ja"    ),
+    ( "sensei",  "i"     ),
+    ( "abc",     "abc"   ),
+    ( "abcabc",  "bc"    ),
+    ( "fails",   "ails"  ),
 )
 
-print(fixed_tests_False[0][1][-1])
-print(unit_test(fixed_tests_False))
+
+#print(fixed_tests_False[0][1][-1])
+#print(unit_tour(fixed_tests_True))

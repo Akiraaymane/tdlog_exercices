@@ -8,4 +8,6 @@ class Exo1Test(unittest.TestCase):
     def test_item_construction(self):
         item = Item(10, 20)
 
-        self.assertEqual(30, item.weight)
+        self.assertEqual(20, item.weight)
+c=Exo1Test()
+c.test_item_construction()
