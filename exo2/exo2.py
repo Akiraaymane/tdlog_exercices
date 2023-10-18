@@ -28,3 +28,34 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+import sys
+def unit_test(liste):
+    a=0
+    for list in liste :
+        if len(list[0])<len(list[1]):
+            print(False)
+            sys.exit()
+        else:
+            for i in range(len(list[1])):
+                if list[0][-1-i]== list[1][-1-i]:
+                    a=a+1
+    c=0
+    for list in liste:
+        c=c+len(list[1]) 
+    if a==c:
+        return(True)
+    else:
+        return(False)                   
+    
+
+fixed_tests_False = (
+    ( "sumo",    "omo"   ),
+    ( "samurai", "ra"    ),
+    ( "abc",     "abcd"  ),
+    ( "ails",    "fails" ),
+    ( "this",    "fails" ),
+    ( "spam",    "eggs"  )
+)
+
+print(fixed_tests_False[0][1][-1])
+print(unit_test(fixed_tests_False))
